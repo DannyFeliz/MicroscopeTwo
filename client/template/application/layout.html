@@ -1,11 +1,7 @@
 <template name="layout">
     <body>
         <div class="container">
-            <header class="navbar navbar-default" role="navegation">
-                <div class="navbar-header">
-                    <a href="{{pathFor 'postsList' '9h8rNkHwzg7oCp3FS'}}" class="navbar-brand">{{pageTitle}}</a>
-                </div>
-            </header>
+            {{> header}}
             <div id="main">
               {{>yield}}
             </div>
