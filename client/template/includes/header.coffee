@@ -1,4 +1,4 @@
 Session.setDefault("pageTitle","Microscope")
-Template.layout.helpers
+Template.header.helpers
   pageTitle: ->
     return Session.get("pageTitle")
