@@ -1,7 +1,7 @@
 Template.loading.rendered = ->
   if ( ! Session.get('loadingSplash') )
     @loading = window.pleaseWait
-      logo: '/meteor-icon.png'
+      logo: '/beer.png'
       backgroundColor: '#282753'
       loadingHtml: message + spinner
 

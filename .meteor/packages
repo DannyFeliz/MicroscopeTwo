@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 twbs:bootstrap
 underscore
 coffeescript
@@ -13,3 +12,5 @@ iron:router
 pcel:loading
 ian:accounts-ui-bootstrap-3
 accounts-password
+practicalmeteor:chai
+msavin:mongol

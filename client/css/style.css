@@ -215,3 +215,10 @@ body {
      }
 }
 
+.pg-loading-logo{
+  margin-bottom: -65px;
+}
+.loading-message{
+  margin-bottom: -75px;
+}
+
