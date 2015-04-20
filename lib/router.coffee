@@ -16,6 +16,13 @@ Router.route("/posts/:_id",{
     Posts.findOne({_id: @params._id})
 })
 
+Router.route("/posts/:_id/edit", {
+  name: "postEdit",
+  template: "postEdit"
+  data: ->
+    Posts.findOne({_id: @params._id})
+})
+
 Router.route("/submit",{
   name: "postSubmit",
   template: "postSubmit"

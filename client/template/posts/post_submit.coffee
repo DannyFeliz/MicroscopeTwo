@@ -10,7 +10,7 @@ Template.postSubmit.events
 
       if(error)
         return console.log(error.reason)
-      console.log "Post already exists: => http://localhost:3000/posts/"+result._id
+
       Router.go("postPage", {_id: result._id})
     )
 

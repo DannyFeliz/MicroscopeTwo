@@ -4,3 +4,5 @@ Template.postItem.helpers
     a.href = this.url
     return a.hostname
 
+  ownPost: ->
+    return @userId is Meteor.userId()
