@@ -1,4 +1,4 @@
-Template.postEdit.helpers
+Template.postEdit.events
   "submit form": (e) ->
     e.preventDefault()
 
@@ -8,14 +8,14 @@ Template.postEdit.helpers
       url: $(e.target).find("[name=url]").val()
       title: $(e.target).find("[name=title]").val()
 
-    Posts.update(currentPostId, {$set: postProperties}, (error) ->
-      if error then console.log(error.reason) else Router.go('postPage', {_id: currentPostId})
+    Posts.update({_id: currentPostId}, {$set: postProperties}, (error) ->
+      if error then throwError(error.reason) else Router.go('postPage', {_id: currentPostId})
     )
 
   "click .delete": (e) ->
     e.preventDefault()
 
     if confirm "Delete this post?"
-      currentPostId = this._id
-      Posts.remove(currentPostId)
+      currentPostId = @._id
+      Posts.remove({_id: currentPostId})
       Router.go("postsList")
